@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="card mb-3" style="margin: 39px 670px 200px 500px">
+    <div class="card-header">
+        Новина: <a>{{ item.title }}</a>
+    </div>
+    <div class="card-body">
+        <a>
+            <img src=" {{ item.photo.url }}" alt="" width="728" class="float-left mr-3" height="400">
+        </a>
+        <p class="card-text">{{ item.content|safe|linebreaks }}</p>
+    </div>
+    <div class="card-footer text-muted">
+        Дата публікації:  {{ item.created_at|date:"Y-m-d H:i:s" }}
+    </div>
+</div>
+
+{% endblock %}

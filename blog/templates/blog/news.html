@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="fh5co-main">
+    <div class="fh5co-narrow-content">
+        <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Новини нашої спільноти</h2>
+        <div class="row row-bottom-padded-md">
+            {% for news in news_list %}
+            <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+                <div class="blog-entry">
+                    <a href="{{ news.get_absolute_url }}" class="blog-img"><img src="{{ news.photo.url }}" class="img-responsive"
+                                                      alt="Фото"></a>
+                    <div class="desc">
+                        <h3><a>{{ news.title|safe|linebreaks|truncatewords:5 }}</a></h3>
+                        <p>{{ news.content|safe|linebreaks|truncatewords:5 }}</p>
+                        <a href="{{ news.get_absolute_url }}" class="lead">Читати докладніше<i class="icon-arrow-right3"></i></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="get-in-touch">
+        <div class="fh5co-narrow-content">
+            <div class="row">
+                <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                    <h1 class="fh5co-heading-colored">Дізнатися про нас докладніше</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+                    <p class="fh5co-lead">Щоб дізнатися про нас докладніше рекомендуємо натиснути на кнопку нижче</p>
+                    <p><a href="{% url 'news' %}" class="btn btn-primary">Докладніше</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

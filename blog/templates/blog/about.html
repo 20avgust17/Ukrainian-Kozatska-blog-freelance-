@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="fh5co-page">
+
+    <div id="fh5co-main">
+        <div class="fh5co-narrow-content">
+            <div class="row row-bottom-padded-md">
+                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                    <img class="img-responsive" src="{% static 'images/kozak_for_about.jpg' %}"
+                         alt="Козак">
+                </div>
+                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                    <h2 class="fh5co-heading">Про нас</h2>
+                    <p>
+                        Ми благодійна організація, заснована на Вінницькому козацтві. Намагаємося якнайчастіше
+                        допомагати нашим хлопцям на фронті, а також місцевим жителям, які опинилися у фронтових містах
+                        та селах. Наша організація щотижня їздить у Херсон, Бахмут та багато інших гарячих точок, у яких
+                        наші війни мужньо борються.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fh5co-narrow-content">
+            <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Сервис</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="icon-settings"></i>
+                        </div>
+                        <div class="fh5co-text">
+                            <h3>Трохи про нас</h3>
+                            <p>Ми благодійна організація заснована на товаристві вінницького козацтва, яка допомагає
+                                фронтовим містам гуманітарною допомогою</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="icon-search4"></i>
+                        </div>
+                        <div class="fh5co-text">
+                            <h3>Допомога</h3>
+                            <p>До нашої організації може приєднатися будь-який волонтер, який хоче допомогти нашій
+                                країні в тяжку хвилину </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="icon-paperplane"></i>
+                        </div>
+                        <div class="fh5co-text">
+                            <h3>Повідомлення</h3>
+                            <p>Ви можете надіслати нам повідомлення зі своїми контактами, якщо вам цікава допомога нашим
+                                військовим і цивільним особам</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="icon-params"></i>
+                        </div>
+                        <div class="fh5co-text">
+                            <h3>Оргазінація</h3>
+                            <p>Оргазінація не комерційна, уся її діяльність абсолютно безоплатна і має тільки благі
+                                цілі </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fh5co-narrow-content">
+            <div class="row">
+                <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                    <h1 class="fh5co-heading-colored">Дізнатися про нас докладніше</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+                    <p class="fh5co-lead">Щоб дізнатися про нас докладніше рекомендуємо натиснути на кнопку нижче</p>
+                    <p><a href="{% url 'news' %}" class="btn btn-primary">Докладніше</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

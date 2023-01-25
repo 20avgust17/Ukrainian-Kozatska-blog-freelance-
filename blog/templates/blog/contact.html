@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="fh5co-main">
+    <div class="fh5co-more-contact">
+        <div class="fh5co-narrow-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="fh5co-feature fh5co-feature-sm animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="icon-globe"></i>
+                        </div>
+                        <div class="fh5co-text">
+                            <p><a href="#">KozakVin@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fh5co-feature fh5co-feature-sm animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="icon-map"></i>
+                        </div>
+                        <div class="fh5co-text">
+                            <p>Вінниця</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fh5co-feature fh5co-feature-sm animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="icon-phone"></i>
+                        </div>
+                        <div class="fh5co-text">
+                            <p><a href="tel://">(093)-798-65-12</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft">
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Зворотній зв'язок</h2>
+            </div>
+        </div>
+        <form action="" method="post">
+            <div class="row">
+                {% csrf_token %}
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            {{ form.as_p }}
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary btn-md" value="Send Message">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <div id="map"></div>
+</div>
+
+
+{% endblock %}
+
